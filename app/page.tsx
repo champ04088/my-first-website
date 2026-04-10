@@ -5,13 +5,10 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
 import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react"
-import { Monitor, Palette, Rocket } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
+import ProjectsSection from "@/components/ProjectsSection"
 import { cn } from "@/lib/utils"
 
 export default function Home() {
@@ -141,63 +138,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <motion.section
-        id="about"
-        className="py-24 px-4"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">About Me</h2>
-          <div className="w-16 h-1 bg-primary mx-auto mt-2 mb-16 rounded-full" />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h3 className="text-xl font-bold">Ilham</h3>
-              <p className="text-muted-foreground text-sm">Web Developer & Network Engineer</p>
-
-              <div className="grid grid-cols-3 gap-2 mt-4">
-                <Card className="text-center p-3 hover:border-primary/50 transition-colors cursor-default">
-                  <CardContent className="p-0">
-                    <p className="text-2xl font-bold text-primary">3+</p>
-                    <p className="text-xs text-muted-foreground">Projects Done</p>
-                  </CardContent>
-                </Card>
-                <Card className="text-center p-3 hover:border-primary/50 transition-colors cursor-default">
-                  <CardContent className="p-0">
-                    <p className="text-2xl font-bold text-primary">1+</p>
-                    <p className="text-xs text-muted-foreground">Years Learning</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            <div>
-              <Separator className="my-6" />
-              <h3 className="text-2xl font-bold mb-4">What I Love</h3>
-              <BentoGrid>
-                <BentoGridItem
-                  header={<div className="p-2 bg-muted/50 rounded-lg w-fit"><Monitor className="text-primary" size={28} /></div>}
-                  title="Coding"
-                  description="I love writing clean code and solving real problems"
-                />
-                <BentoGridItem
-                  header={<div className="p-2 bg-muted/50 rounded-lg w-fit"><Palette className="text-primary" size={28} /></div>}
-                  title="Design"
-                  description="Creating beautiful visuals with Canva and CSS"
-                />
-                <BentoGridItem
-                  header={<div className="p-2 bg-muted/50 rounded-lg w-fit"><Rocket className="text-primary" size={28} /></div>}
-                  title="Building Things"
-                  description="Bringing ideas to life with technology"
-                />
-              </BentoGrid>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <ProjectsSection />
     </main>
   )
 }
