@@ -126,7 +126,7 @@ export default function Home() {
               </div>
 
               <Image
-                src="/4.jpeg"
+                src="/image.jpeg"
                 alt="Profile Photo"
                 fill
                 priority
