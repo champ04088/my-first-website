@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { CheckSquare, Mail, MapPin } from "lucide-react"
 import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react"
 import { Spotlight } from "@/components/ui/spotlight"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
@@ -90,17 +91,43 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Social Icons */}
-              <div className="flex gap-4">
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <IconBrandGithub className="w-6 h-6" />
-                </Link>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <IconBrandLinkedin className="w-6 h-6" />
-                </Link>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <IconBrandTwitter className="w-6 h-6" />
-                </Link>
+              {/* Social links and contact bar */}
+              <div className="max-w-2xl space-y-4 pt-2">
+                <div className="flex flex-wrap gap-4">
+                  <Button variant="outline" asChild className="h-12 min-w-24 rounded-xl px-6">
+                    <Link href="#">
+                      <IconBrandGithub className="mr-2 h-4 w-4" />
+                      GitHub
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild className="h-12 min-w-24 rounded-xl px-6">
+                    <Link href="#">
+                      <IconBrandLinkedin className="mr-2 h-4 w-4" />
+                      LinkedIn
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild className="h-12 min-w-24 rounded-xl px-6">
+                    <Link href="#">
+                      <IconBrandTwitter className="mr-2 h-4 w-4" />
+                      Twitter
+                    </Link>
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-xl border border-border/50 bg-background/70 px-4 py-3 text-sm text-muted-foreground backdrop-blur-sm">
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-primary" />
+                    <span>ilhamesmail402@gmail.com</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span>Mombasa, KE (Remote)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckSquare className="h-4 w-4 text-green-500" />
+                    <span>open</span>
+                  </div>
+                </div>
               </div>
             </div>
 
